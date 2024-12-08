@@ -16,7 +16,8 @@
     "format-fix": "npm run format -- --write",
     "lint": "eslint src --ext ts,tsx --max-warnings 0",
     "lint-fix": "npm run lint -- --fix",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
