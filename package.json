@@ -11,6 +11,7 @@
     "start": "esbuild --serve --servedir=public",
     "build": "tsc && node ./builder.mjs",
     "typecheck": "tsc --noEmit",
+    "precommit": "npm run lint-staged",
     "format": "prettier  \"{src,test}/**/*.ts\" --list-different",
     "format-fix": "npm run format -- --write",
     "lint": "eslint src --ext ts,tsx --max-warnings 0",
@@ -35,6 +36,8 @@
     "@types/react-dom": "^19.0.1",
     "esbuild": "^0.24.0",
     "esbuild-plugin-tsc": "^0.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "typescript": "^5.7.2"
