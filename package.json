@@ -1,0 +1,42 @@
+{
+  "name": "pip-boy",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.ts",
+  "main": "dist/src/index.js",
+  "module": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "start": "esbuild --serve --servedir=public",
+    "build": "tsc && node ./builder.mjs",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier  \"{src,test}/**/*.ts\" --list-different",
+    "format-fix": "npm run format -- --write",
+    "lint": "eslint src --ext ts,tsx --max-warnings 0",
+    "lint-fix": "npm run lint -- --fix",
+    "lint-staged": "lint-staged"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "lint-staged": {
+    "**/*.{js,ts|jsx,tsx}": [
+      "npm run lint-fix",
+      "npm run format-fix"
+    ]
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "esbuild": "^0.24.0",
+    "esbuild-plugin-tsc": "^0.4.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.2"
+  }
+}
